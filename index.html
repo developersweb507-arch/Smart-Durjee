@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur & Co. | Bespoke Tailoring</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #1a2530; /* Dark Navy */
+            --accent: #c5a059;  /* Gold */
+            --light: #f4f4f4;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif; /* Serif for elegance */
+            color: var(--primary);
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            margin-left: 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-book {
+            background-color: var(--primary);
+            color: #fff !important;
+            padding: 10px 20px;
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary); /* Fallback color */
+            /* Ideally, put a background image url here */
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1594938298603-c8148c47e356?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #b08d4b;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title .divider {
+            height: 3px;
+            width: 60px;
+            background-color: var(--accent);
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            box-shadow: 10px 10px 0px var(--accent);
+        }
+
+        /* Services */
+        .services {
+            background-color: var(--light);
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            flex-basis: 30%;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        /* Process */
+        .process-steps {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .step {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .step-number {
+            font-size: 3rem;
+            color: var(--accent);
+            font-family: serif;
+            display: block;
+        }
+
+        /* Contact/Footer */
+        footer {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: #fff;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Simplified for demo */
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .service-cards { flex-direction: column; }
+            .process-steps { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Smart Durjee      </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#contact" class="btn-book">Book Appointment</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+             <img src="business logo.png" width="300px" >
+            <h1>Tailored for the Modern Gentleman</h1>
+            <p>Handcrafted suits, bespoke shirts, and precision alterations.</p>
+            <a href="#contact" class="cta-button">Schedule a Consultation</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-grid">
+            <div>
+                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tailor working" class="about-img">
+            </div>
+            <div>
+                <h2>The Art of the Perfect Fit</h2>
+                <div class="divider" style="height:2px; width:40px; background:var(--accent); margin: 10px 0 20px 0;"></div>
+                <p>At Arthur & Co., we believe a suit is more than just clothing—it is an expression of confidence. With over 20 years of experience in Savile Row techniques, we bring traditional craftsmanship to the modern wardrobe.</p>
+                <p>Every stitch is placed with intention, and every pattern is cut to your unique silhouette. We don't just measure you; we listen to your lifestyle to create a garment that moves with you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Bespoke Tailoring</h3>
+                <p>The pinnacle of luxury. A suit created from scratch based on your unique measurements and style preferences. Includes multiple fittings.</p>
+            </div>
+            <div class="card">
+                <h3>Made-to-Measure</h3>
+                <p>A perfect blend of quality and speed. We adjust a pre-existing pattern to fit your body, offering hundreds of fabric choices.</p>
+            </div>
+            <div class="card">
+                <h3>Alterations</h3>
+                <p>Revitalize your favorite garments. From hemming trousers to taking in jackets, we ensure your clothes fit like they were made for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process">
+        <div class="section-title">
+            <h2>The Process</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="process-steps">
+            <div class="step">
+                <span class="step-number">01</span>
+                <h3>Consultation</h3>
+                <p>We discuss style, occasion, and select fabrics from our library of over 500 swatches.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">02</span>
+                <h3>Measurement</h3>
+                <p>We take over 30 precise measurements to ensure the garment contours perfectly to your body.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">03</span>
+                <h3>Fitting</h3>
+                <p>A basted fitting allows us to make minor adjustments before the final stitching.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact">
+        <h2>Visit Our Studio</h2>
+        <p>Ready to look your best? Book your appointment today.</p>
+        
+        <div class="contact-info">
+            <div>
+                <strong>Address</strong><br>
+                123 Fashion Avenue<br>
+                New York, NY 10018
+            </div>
+            <div>
+                <strong>Hours</strong><br>
+                Mon - Fri: 9am - 6pm<br>
+                Sat: 10am - 4pm
+            </div>
+            <div>
+                <strong>Contact</strong><br>
+                (555) 123-4567<br>
+                info@arthurandco.com
+            </div>
+        </div>
+        <br><br>
+        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2023 Arthur & Co. Tailors. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
